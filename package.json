@@ -1,0 +1,24 @@
+{
+  "name": "objectsofdeath-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "api for objectsOfDeath project",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node ./bin/start"
+  },
+  "author": "Ouismer",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.5",
+    "mongoose-unique-validator": "^3.1.0",
+    "morgan": "~1.10.0",
+    "nodemon": "^3.1.9"
+  }
+}
