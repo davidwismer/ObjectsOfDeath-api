@@ -12,7 +12,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/:questionNumber", function (req, res, next) {
-    Answer.find({ _questionNumber: req.params.questionNumber }).exec(function (err, answers) {
+    Answer.find({ questionNumber: req.params.questionNumber }).exec(function (err, answers) {
         if (err) {
             return next(err)
         }
