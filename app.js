@@ -2,6 +2,7 @@ import express from "express";
 import createError from "http-errors";
 import logger from "morgan";
 import answersRouter from "./routes/answer.js"
+import indexRouter from "./routes/index.js"
 import mongoose from 'mongoose';
 import cors from "cors"
 import "dotenv/config"
@@ -18,6 +19,7 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(express.json({limit: '200mb'}));
 app.use(express.urlencoded({limit: '200mb', extended: false}));
 
+app.use("/", indexRouter)
 app.use("/answers", answersRouter);
 
 // catch 404 and forward to error handler
